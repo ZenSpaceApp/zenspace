@@ -39,9 +39,9 @@ export function Navbar() {
 
         <div className={styles.actions}>
           <Link href="/login" className={styles.signIn}>Sign in</Link>
-          <Link href="/early-access" className={`${styles.cta} btn btn--primary`}>
+          {/* <Link href="/early-access" className={`${styles.cta} btn btn--primary`}>
             Get early access
-          </Link>
+          </Link> */}
         </div>
 
         <button
