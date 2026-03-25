@@ -1,0 +1,78 @@
+// src/components/Footer/Footer.module.scss
+
+.footer {
+  background: $gray-900;
+  padding: $space-16 0 $space-8;
+  margin-top: $space-24;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $space-16;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $space-10;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.logo {
+  font-family: $font-serif;
+  font-size: $text-xl;
+  font-weight: 400;
+  color: $white;
+  letter-spacing: -0.02em;
+
+  &:hover { color: $green-400; }
+}
+
+.tagline {
+  font-size: $text-sm;
+  color: $gray-400;
+  line-height: 1.6;
+}
+
+.copy {
+  font-size: $text-xs;
+  color: $gray-500;
+  margin-top: auto;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $space-8;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.groupLabel {
+  font-size: $text-xs;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $gray-400;
+}
+
+.link {
+  font-size: $text-sm;
+  color: $gray-500;
+  transition: color $transition-fast;
+
+  &:hover { color: $white; }
+}

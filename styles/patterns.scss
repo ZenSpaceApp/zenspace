@@ -1,0 +1,49 @@
+/* Shared layout patterns (mobile-first)
+   Use these classes in markup to achieve full-bleed backgrounds
+   while keeping inner content constrained to the site's container.
+
+   Example:
+   <section class="full-bleed" style="background:var(--green-50)">
+     <div class="container">
+       <!-- constrained content -->
+     </div>
+   </section>
+
+   For edge-to-edge backgrounds that ignore any page padding, use
+   `full-bleed--edge` on the same element.
+*/
+
+.full-bleed {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem 0; /* mobile-first vertical spacing */
+}
+
+.full-bleed > .container {
+  /* ensure the inner container still uses the global max width */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-page-x);
+}
+
+/* Edge variant: stretches the element to the viewport edges
+   (useful when the page wrapper has horizontal padding you want
+    the background to ignore). */
+.full-bleed--edge {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .full-bleed, .full-bleed--edge { padding: 2.5rem 0; }
+}
+
+@media (min-width: 1024px) {
+  .full-bleed, .full-bleed--edge { padding: 4rem 0; }
+}

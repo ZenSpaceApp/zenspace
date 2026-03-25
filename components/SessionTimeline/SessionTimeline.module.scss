@@ -1,0 +1,273 @@
+// components/SessionTimeline/SessionTimeline.module.scss
+
+// ── Tokens ────────────────────────────────────────────────────
+$color-blue-bg:     #E6F1FB;
+$color-blue-text:   #0C447C;
+$color-blue-dot:    #185FA5;
+
+$color-green-bg:    #E1F5EE;
+$color-green-text:  #085041;
+$color-green-dot:   #1D9E75;
+
+$color-amber-bg:    #FAEEDA;
+$color-amber-text:  #633806;
+
+$color-purple-bg:   #EEEDFE;
+$color-purple-text: #3C3489;
+
+$color-text-primary:   #2C2C2A;
+$color-text-secondary: #5F5E5A;
+$color-text-tertiary:  #888780;
+$color-border:         rgba(44, 44, 42, 0.15);
+$color-border-mid:     rgba(44, 44, 42, 0.28);
+$color-bg:             #ffffff;
+
+// ── Animations ────────────────────────────────────────────────
+@keyframes ambientPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+@keyframes ambientFadeUp {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ambientFillBar {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes ambientCheckPop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+// ── Root ──────────────────────────────────────────────────────
+.root {
+  width: 100%;
+  max-width: 620px;
+  font-family: inherit; // inherits from Next.js layout font
+}
+
+// ── Eyebrow ───────────────────────────────────────────────────
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-text-tertiary;
+  margin: 0 0 1.5rem 0;
+}
+
+// ── Timeline rail ─────────────────────────────────────────────
+.timeline {
+  border-left: 1.5px solid $color-border;
+  margin-left: 16px;
+  padding-left: 1.25rem;
+}
+
+// ── Step ──────────────────────────────────────────────────────
+.step {
+  position: relative;
+  margin-bottom: 1.1rem;
+  opacity: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stepVisible {
+  animation: ambientFadeUp 0.4s ease forwards;
+}
+
+// ── Dot ───────────────────────────────────────────────────────
+.dot {
+  position: absolute;
+  left: calc(-1.25rem - 16px + 16px - 4.5px);
+  // simplified: sits on the rail
+  left: -1.62rem;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: $color-border-mid;
+  border: 2px solid $color-bg;
+  transition: background 0.25s ease;
+  display: block;
+}
+
+.dotActive {
+  background: $color-blue-dot;
+  animation: ambientPulse 1.1s ease-in-out infinite;
+}
+
+.dotDone {
+  background: $color-green-dot;
+  animation: ambientCheckPop 0.35s ease forwards;
+}
+
+// ── Step row ──────────────────────────────────────────────────
+.stepRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stepName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.stepNameActive {
+  color: $color-blue-text;
+}
+
+.stepNameDone {
+  color: $color-green-text;
+}
+
+.stepSub {
+  font-size: 12.4px;
+  color: $color-text-tertiary;
+  margin: 2px 0 0 0;
+  line-height: 1.4;
+  font-weight: 500;
+
+}
+
+// ── Tag pill ──────────────────────────────────────────────────
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &--blue {
+    background: $color-blue-bg;
+    color: $color-blue-text;
+  }
+
+  &--purple {
+    background: $color-purple-bg;
+    color: $color-purple-text;
+  }
+
+  &--amber {
+    background: $color-amber-bg;
+    color: $color-amber-text;
+  }
+
+  &--green {
+    background: $color-green-bg;
+    color: $color-green-text;
+  }
+}
+
+.tagVisible {
+  opacity: 1;
+}
+
+// ── Progress bar ──────────────────────────────────────────────
+.barWrap {
+  height: 2px;
+  background: $color-border;
+  border-radius: 2px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  background: $color-blue-dot;
+}
+
+.barActive {
+  animation: ambientFillBar var(--step-dur, 2s) ease forwards;
+}
+
+.barDone {
+  width: 100% !important;
+  background: $color-green-dot;
+  animation: none;
+}
+
+// ── Footer ────────────────────────────────────────────────────
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 0.5px solid $color-border;
+  opacity: 0;
+}
+
+.footerVisible {
+  animation: ambientFadeUp 0.5s ease forwards;
+}
+
+.footerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-green-dot;
+  flex-shrink: 0;
+}
+
+.footerText {
+  font-size: 12px;
+  color: $color-text-secondary;
+  margin: 0;
+
+  strong {
+    color: $color-green-text;
+    font-weight: 600;
+  }
+}
+
+.footerTime {
+  font-size: 12px;
+  color: $color-text-tertiary;
+  margin-left: auto;
+}
+
+// ── Replay ────────────────────────────────────────────────────
+.replay {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 11px;
+  color: $color-text-tertiary;
+  background: none;
+  border: none;
+  padding: 3px 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-text-secondary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-blue-dot;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
