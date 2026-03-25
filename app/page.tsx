@@ -1,14 +1,12 @@
-// src/app/page.tsx
-import { Navbar, Footer } from '@/components';
+import { Footer, Navbar } from '@/components';
+import Hero from '@/components/ui/Hero/Hero';
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '64px' }}>
-        {/* Hero section goes here */}
-        {/* JobsSection goes here */}
-        {/* Other sections go here */}
+      <main>
+        <Hero />
       </main>
       <Footer />
     </>

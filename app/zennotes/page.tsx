@@ -13,7 +13,6 @@ import HumanSignature from '@/public/icons/human-first.svg';
 import { SessionTimeline } from '@/components/SessionTimeline/SessionTimeline';
 
 import { JobsSection } from '@/components/JTBDSection/JobsSecton';
-import ZenNotesFAQ from '@/components/ZenNotesFAQ';
 
 import PatientNoteMockup from '@/components/PatientNotesMockup/PatientNoteMockup';
 import BillingTab from '@/public/images/superbill_final.png';

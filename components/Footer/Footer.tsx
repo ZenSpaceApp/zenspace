@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './Footer.module.scss';
 import AudioTap from '@/public/icons/audio-tap.svg';
 import Image from 'next/image';
-import ZenspaceLogo from '../ZenspaceLogo';
+import ZenspaceLogo from '../ui/ZenspaceLogo';
 
 const LINKS = {
   Solutions: [

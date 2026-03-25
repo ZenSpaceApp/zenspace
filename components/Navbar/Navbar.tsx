@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
-import ZenspaceLogo from '../ZenspaceLogo';
+import ZenspaceLogo from '../ui/ZenspaceLogo';
 
 const NAV_LINKS = [
   { label: 'Therapists', href: '/therapists' },
@@ -26,9 +26,8 @@ export function Navbar() {
     <header className={[styles.header, scrolled ? styles.scrolled : ''].join(' ')}>
       <nav className={styles.nav}>
 
-        <Link href="/" className={styles.logo}>
-          <ZenspaceLogo />
-        </Link>
+
+        <ZenspaceLogo />
 
         <ul className={styles.links}>
           {NAV_LINKS.map(link => (
