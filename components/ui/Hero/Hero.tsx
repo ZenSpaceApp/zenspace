@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 1. The "Granola" Background */}
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/hero-zen.jpg" // Your 2560px export
+          src="/images/hero-zen.webp" // Your 2560px export
           alt="Zen Garden"
           fill
           priority
