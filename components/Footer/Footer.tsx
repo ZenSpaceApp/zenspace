@@ -36,9 +36,9 @@ export function Footer() {
 
         <div className={styles.brand}>
           <ZenspaceLogo />
-          <p className={styles.tagline}>
+          {/* <p className={styles.tagline}>
             Your session ends.<br />Your notes are already done.
-          </p>
+          </p> */}
           <p className={styles.copy}>©{new Date().getFullYear()} ZenspaceApp Inc.</p>
         </div>
 
