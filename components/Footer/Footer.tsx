@@ -39,7 +39,7 @@ export function Footer() {
           <p className={styles.tagline}>
             Your session ends.<br />Your notes are already done.
           </p>
-          <p className={styles.copy}>©{new Date().getFullYear()} ZenSpaceApp Inc.</p>
+          <p className={styles.copy}>©{new Date().getFullYear()} ZenspaceApp Inc.</p>
         </div>
 
         <nav className={styles.links}>
