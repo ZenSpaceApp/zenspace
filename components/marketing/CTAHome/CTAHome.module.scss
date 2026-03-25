@@ -1,0 +1,42 @@
+.ctaWrapper {
+  @include section-spacing();
+  background: linear-gradient(to bottom, var(--white), var(--green-50));
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.ctaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  p {
+    font-family: var(--font-syne);
+    font-weight: 600;
+    color: var(--green-800);
+    font-size: 1.1rem;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 80px;
+  background: var(--green-200);
+
+  @media (max-width: 768px) {
+    width: 60%;
+    height: 1px;
+  }
+}

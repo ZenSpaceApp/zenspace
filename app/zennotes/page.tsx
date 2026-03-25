@@ -16,7 +16,7 @@ import { JobsSection } from '@/components/JTBDSection/JobsSecton';
 
 import PatientNoteMockup from '@/components/PatientNotesMockup/PatientNoteMockup';
 import BillingTab from '@/public/images/superbill_final.png';
-import CTASection from '@/components/CTASection/CTASection';
+import CTASection from '@/components/marketing/CTASection/CTASection';
 import FAQ from '@/components/FAQ/FAQ';
 
 export const metadata = {

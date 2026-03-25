@@ -1,4 +1,5 @@
 import { Footer, Navbar } from '@/components';
+import CTAHome from '@/components/marketing/CTAHome/CTAHome';
 import Hero from '@/components/ui/Hero/Hero';
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <CTAHome />
       </main>
       <Footer />
     </>

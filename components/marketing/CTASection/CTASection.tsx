@@ -1,6 +1,6 @@
 // components/marketing/CTASection/CTASection.tsx
 import styles from './CTASection.module.scss';
-import Button from '../ui/Button/Button';
+import Button from '../../ui/Button/Button';
 
 export default function CTASection() {
   const benefits = [

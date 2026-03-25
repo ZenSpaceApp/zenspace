@@ -20,9 +20,9 @@
 
   /* ZenMatch (Marketplace) */
   &[data-brand="match"] {
-    background: var(--blue-600);
-    color: white;
-    &:hover { background: var(--blue-700); }
+    background: var(--green-100);
+    // color: white;
+    &:hover { background: var(--green-400); }
   }
 
   /* Secondary Variant (Ghost Button) */
