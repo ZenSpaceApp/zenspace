@@ -5,7 +5,7 @@ import styles from './FAQ.module.scss';
 
 interface FAQProps {
   title?: string;
-  items: [string, string][]; // Matches your [question, answer] array format
+  items: string[][]; // Matches your [question, answer] array format
   brand?: 'notes' | 'match' | 'parent';
 }
 
