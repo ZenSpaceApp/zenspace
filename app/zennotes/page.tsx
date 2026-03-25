@@ -4,12 +4,15 @@ import styles from './page.module.scss';
 import Link from 'next/link';
 import WaveformAnim from '@/components/Waveform/WaveformAnim';
 import Image from 'next/image';
-
+import VideoInterface from '@/public/images/easy-connecting.webp';
+  
 import AudioTap from '@/public/icons/audio-tap.svg';
 import HumanFirst from '@/public/icons/soul.svg';
 import ZeroPersistence from '@/public/icons/ram-only.svg';
 import HumanSignature from '@/public/icons/human-first.svg';
 import { SessionTimeline } from '@/components/SessionTimeline/SessionTimeline';
+
+import { JobsSection } from '@/components/JTBDSection/JobsSecton';
 
 export const metadata = {
   title: 'ZenNotes',
@@ -72,13 +75,8 @@ export default function ZenNotesPage() {
             </Link>
           </div>
           <div className={styles.postSessionTimeline}>
-          {/* Replace with <Image src="/assets/zennotes-hero.png" alt="ZenNotes dashboard" fill /> */}
-          {/* <Image
-            src={ZenNoteHeroImg}
-            alt="ZenNotes dashboard"
-          /> */}
-          <SessionTimeline autoPlay loop loopDelay={2200} showReplay={false} />
-        </div>
+            <SessionTimeline autoPlay loop loopDelay={2200} showReplay={false} />
+          </div>
         </section>
 
         {/* ── Trust Bar ── */}
@@ -107,9 +105,61 @@ export default function ZenNotesPage() {
             </div>
           ))}
         </div>
+        </section>
+        <JobsSection />
+        {/* ── We Own The Pipes Section ── */}
+      <section className={styles.pipesSection}>
+        <div style={{ maxWidth: '600px', margin: '0 auto 4rem', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+          <WaveformAnim />
+        </div>
+        <h2 style={{marginTop: '2rem'}}>Studio-quality calls</h2>
+        <p className={styles.pipesSub}>
+          ZenNotes is built into the call — not a passive recorder watching from outside.
+          That&apos;s why we catch what others miss, and why nothing ever joins your session uninvited.
+        </p>
+        </div>
+      <div className={styles.pipesInner}>
+        <div className={styles.pipesImage}>
+          {/* Replace with <Image src="/assets/zennotes-video-call.png" alt="Video calling interface" fill /> */}
+          <Image
+            src={VideoInterface}
+            alt="Video calling interface"
+          />
+        </div>
+
+        <div className={styles.pipesText}>
+          <ul className={styles.pipesList}>
+            <li>
+              <div className={styles.pipesItemHeader}>
+                {/* <span className={styles.pipesItemDot} /> */}
+                <strong>Direct Stream Extraction</strong>
+              </div>
+              <p>We process <b>audio and video natively delivering a seamless HD experience</b>.
+                No Bots, no third-party API lag, no security middlemen.</p>
+            </li>
+            <li>
+              <div className={styles.pipesItemHeader}>
+                {/* <span className={styles.pipesItemDot} /> */}
+                <strong>Instantaneous Processing</strong>
+              </div>
+              <p>
+                Audio is analyzed and evaporates as soon as the session ends.
+                We <b>deliver the intelligence</b>, not the liability.
+              </p>
+            </li>
+            <li>
+              <div className={styles.pipesItemHeader}>
+                {/* <span className={styles.pipesItemDot} /> */}
+                <strong>Agentic Context Synthesis</strong>
+              </div>
+              <p>Unlike legacy scribes, we don&apos;t just transcribe; we <b>synthesize the Affect and Thematic Memory </b> directly into the note.</p>
+            </li>
+          </ul>
+          </div>
+          </div>
       </section>
       </main>
-
       <Footer />
     </div>
   );
