@@ -72,13 +72,13 @@ export function Navbar() {
           <Link href="/login" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
             Sign in
           </Link>
-          <Link
+          {/* <Link
             href="/early-access"
             className={`${styles.mobileCta} btn btn--primary`}
             onClick={() => setMenuOpen(false)}
           >
             Get early access
-          </Link>
+          </Link> */}
         </div>
       )}
     </header>
