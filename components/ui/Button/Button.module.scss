@@ -1,0 +1,35 @@
+.button {
+  /* Base Zen DNA */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 100px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+
+  /* ZenNotes (Angle of Attack) */
+  &[data-brand="notes"] {
+    background: var(--green-600);
+    color: white;
+    &:hover { background: var(--green-700); transform: translateY(-2px); }
+  }
+
+  /* ZenMatch (Marketplace) */
+  &[data-brand="match"] {
+    background: var(--blue-600);
+    color: white;
+    &:hover { background: var(--blue-700); }
+  }
+
+  /* Secondary Variant (Ghost Button) */
+  &[data-variant="secondary"] {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: inherit;
+    &:hover { background: rgba(0,0,0,0.05); }
+  }
+}

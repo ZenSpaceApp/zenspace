@@ -32,7 +32,7 @@
 @media (min-width: 1024px) {
   .content {
     max-width: 1240px;
-    padding: 4rem 2rem;
+    padding: 0rem 2rem;
   }
 }
 
@@ -92,32 +92,7 @@
 
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  // padding: 6rem 1rem 4rem;
-  max-width: 1400px !important;
-  margin: 0 auto;
-
-
-  // @media (min-width: 540px) {
-  //   padding: 7rem 1.5rem;
-  // }
-
-  // @media (min-width: 768px) {
-  //   grid-template-columns: 1fr 1fr;
-  //   gap: 32px;
-  //   padding: 8rem 1rem;
-  // }
-
-  // @media (min-width: 1024px) {
-  //   padding: 10rem 1rem;
-  // }
-
-  // @media (min-width: 1280px) {
-  //   padding: 12rem 1rem;
-  // }
-  @include hero-paddings();
+  @include hero-split();
 }
 
 .heroText {
@@ -250,7 +225,7 @@
     font-weight: 500;
   }
 
-  @include section-paddings();
+  @include section-spacing();
 }
 
 .featuresGrid {
@@ -291,10 +266,12 @@
 .pipesSection {
   gap: 4rem;
   align-items: center;
-  padding: 10rem 20px 16rem ;
+
   max-width: 1240px;
   margin: 0 auto;
   border-top: 1px solid var(--color--border--1);
+  border-bottom: 1px solid var(--color--border--1);
+
 
   b {
     font-weight: 600;
@@ -303,9 +280,10 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 6rem 1.5rem;
     gap: 24px;
   }
+
+  @include section-spacing();
 }
 
 .pipesInner {
@@ -421,4 +399,288 @@
   border-radius: 50%;
   background: var(--green-600);
   flex-shrink: 0;
+}
+
+// ─── Privacy Section ─────────────────────────────────────────────────────────
+
+.privacySection {
+  background:linear-gradient(#1a1c1b, black);
+
+
+  .privacyInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include section-spacing();
+}
+
+.privacyPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 540px) {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: none;
+  }
+
+  .phoneWrapper {
+    width: 260px;
+    aspect-ratio: 9/19;
+    // background: #111;
+    border-radius: 40px;
+    border: 2px solid #333;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.privacyText {
+  h2 {
+    // font-family: var(--font--alt), sans-serif;
+    // font-size: clamp(2rem, 3vw, 3rem);
+    // font-weight: 700;
+    color: #ffffff70 !important;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+  }
+
+  .privacySub {
+    // font-size: 1.25rem;
+    line-height: 1.5;
+    color: #999999;
+    margin: 0 0 2rem;
+    // margin-top: 1.5rem;
+  }
+}
+
+.privacyBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    // font-size: 0.88rem;
+    font-weight: bold;
+    color: #ccc;
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #888;
+            flex-shrink: 0;
+    }
+  }
+}
+
+
+// ─── Public Notes Section ─────────────────────────────────────────────────────
+
+.publicSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  b {
+    font-weight: 700;
+    color: var(--color--grey2) !important;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include section-spacing();
+}
+
+.publicText {
+  h2 {
+    // font-family: var(--font--alt), sans-serif;
+    // font-size: clamp(1.8rem, 3vw, 2.6rem);
+    // font-weight: 700;
+    // color: var(--color--grey3);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    // font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--color--grey2);
+    margin: 0;
+    max-width: 540px;
+  }
+}
+
+.publicPhone {
+  display: flex;
+  justify-content: center;
+
+  .phoneCard {
+    width: 260px;
+    background: #fff;
+    border-radius: 32px;
+    border: 1px solid var(--color--border--1);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    aspect-ratio: 9/17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color--grey2);
+    font-size: 0.75rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+// ─── Billing Section ─────────────────────────────────────────────────────────
+
+.billingSection {
+  /* Use your new fluid spacing mixin */
+  @include section-spacing(); 
+  
+  /* Subtle granola gradient */
+  background: linear-gradient(180deg, #f8f8f8, var(--green-100), #ffffff);
+  
+  .billingInner {
+    /* Use your container max-width from the global setup */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Use the fluid gap approach */
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+
+    /* Single clean breakpoint for mobile stacking */
+    grid-template-columns: 1fr;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .imgHero {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Soft 'Zen' rounding and shadow */
+    border-radius: var(--zen-radius, 16px);
+    border: 1px solid var(--green-200);
+    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.08);
+    
+    @media (max-width: 768px) {
+      /* Give it air on mobile */
+      margin-bottom: 2rem;
+    }
+  }
+
+  h2 {
+    /* Font handled by your global Syne/Inter logic */
+    margin-bottom: 1rem;
+  }
+
+  p {
+    /* Use your global variables instead of hardcoded hex/px */
+    color: var(--green-800);
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+  }
+
+  b {
+    font-weight: 700;
+    color: var(--green-950);
+  }
+}
+
+
+.billingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  /* Ensure it doesn't hug the edge on mobile */
+  margin: 0 auto; 
+  gap: 2rem;
+}
+
+.subheadline {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--green-700);
+  font-weight: 500;
+  margin-top: -0.5rem; // Tighten the gap to the H2
+}
+
+.billingList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bulletItem {
+  /* Remove the box border for a cleaner 'Zen' look */
+  border-left: 3px solid var(--green-200); 
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-left-color: var(--green-500);
+  }
+}
+
+.bulletTitle {
+  display: block; // Put the title on its own line for 'ZenNotes' clarity
+  // font-family: var(--font-syne); // Use the brand font for headers
+  font-weight: 700;
+  color: var(--green-950);
+  margin-bottom: 0.25rem;
+}
+
+.bulletBody {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--green-800);
+}
+
+@media (max-width: 768px) {
+  .billingContent {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 }

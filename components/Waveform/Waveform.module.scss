@@ -17,7 +17,7 @@
 }
 
 .waveformBar {
-  fill: var(--secondary);
+  fill: var(--green-600);
   transform-origin: center;
   transform-box: fill-box;
   animation: waveformLive 1.1s ease-in-out infinite;

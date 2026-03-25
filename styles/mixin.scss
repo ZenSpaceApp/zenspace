@@ -1,0 +1,46 @@
+
+@mixin section-spacing {
+  /* 
+     Formula: clamp(MIN, PREFERRED, MAX)
+     - Starts at 4rem (Mobile)
+     - Scales dynamically at 8vw (8% of screen width)
+     - Caps at 12rem (Large Desktop)
+  */
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  
+  /* Horizontal padding scales slightly too */
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
+}
+
+@mixin hero-spacing {
+  /* Starts at 6rem (mobile), scales at 10% of width, caps at 14rem (desktop) */
+  padding-top: clamp(6rem, 10vw, 14rem);
+  padding-bottom: clamp(4rem, 8vw, 10rem);
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
+}
+
+@mixin hero-split {
+  @include hero-spacing;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; // More breathing room on desktop
+  }
+}
+
+@mixin hero-centered {
+  @include hero-spacing;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px; // Keeps line length readable for Zen vibes
+  margin: 0 auto;
+}

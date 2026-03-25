@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
-import { Inter, Lora } from 'next/font/google';
+import { Inter, Lora, Syne } from 'next/font/google';
 import '@/styles/globals.scss';
 
 const inter = Inter({
@@ -14,6 +14,11 @@ const lora = Lora({
   variable: '--font-lora',
   display: 'swap',
   style: ['normal', 'italic'],
+});
+
+const syne = Syne({
+  subsets: ['latin'],
+  variable: '--font-syne',
 });
 
 export const metadata: Metadata = {
@@ -36,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${lora.variable}`}>
+    <html lang="en" className={`${inter.variable} ${lora.variable} ${syne.variable}`}>
       <body>{children}</body>
     </html>
   );

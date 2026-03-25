@@ -1,0 +1,77 @@
+.faqSection {
+  @include section-spacing();
+  background: transparent;
+  // border-top: 1px solid var(--green-200);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.item {
+  border-top: 1px solid var(--green-200);
+  cursor: pointer;
+  padding: 1.25rem 0;
+  transition: all 0.3s ease;
+
+  &:last-child {
+    border-bottom: 1px solid var(--green-200);
+  }
+
+  &:hover .question {
+    color: var(--green-900);
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--green-950);
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--green-600);
+}
+
+/* Smooth Accordion Logic */
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.item.open {
+  .answerWrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+.answer {
+  overflow: hidden;
+  p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    color: var(--green-800);
+    margin: 0;
+  }
+}

@@ -1,9 +1,11 @@
 // src/components/Footer/Footer.module.scss
 
 .footer {
-  background: $gray-900;
-  padding: $space-16 0 $space-8;
-  margin-top: $space-24;
+  // background: var(--green-950); // Using your new Zen variables
+  padding: clamp(4rem, 8vw, 6rem) 0 5rem; 
+  /* Remove margin-top and let the previous section's padding handle the air */
+  margin-top: 0; 
+  border-top: 1px solid var(--green-100);
 }
 
 .inner {
@@ -24,13 +26,13 @@
 }
 
 .logo {
-  font-family: $font-serif;
+  font-family: var(--font-syne);
   font-size: $text-xl;
   font-weight: 400;
-  color: $white;
+  color: $green-600;
   letter-spacing: -0.02em;
 
-  &:hover { color: $green-400; }
+  &:hover { color: $green-600; }
 }
 
 .tagline {

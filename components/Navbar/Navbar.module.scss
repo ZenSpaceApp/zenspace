@@ -29,14 +29,14 @@
 }
 
 .logo {
-  font-family: $font-serif;
-  font-size: $text-xl;
+  font-family: var(--font-syne);
+  // font-size: $text-xl;
   font-weight: 400;
-  color: $black;
+  color: var(--green-600);
   letter-spacing: -0.02em;
   flex-shrink: 0;
 
-  &:hover { color: $green-700; }
+  &:hover { color: var(--green-700); }
 }
 
 .links {

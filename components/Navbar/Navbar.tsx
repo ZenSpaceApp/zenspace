@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
+import ZenspaceLogo from '../ZenspaceLogo';
 
 const NAV_LINKS = [
   { label: 'Therapists', href: '/therapists' },
@@ -26,7 +27,7 @@ export function Navbar() {
       <nav className={styles.nav}>
 
         <Link href="/" className={styles.logo}>
-          ZenSpace
+          <ZenspaceLogo />
         </Link>
 
         <ul className={styles.links}>

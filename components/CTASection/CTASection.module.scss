@@ -1,0 +1,49 @@
+.wrapper {
+  @include section-spacing();
+  background: linear-gradient(to bottom, var(--green-50), white);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(3rem, 8vw, 6rem);
+  align-items: center;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.tagline {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--green-700);
+  font-family: var(--font-syne);
+  margin: 1rem 0 2.5rem;
+}
+
+.benefitList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  color: var(--green-600);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.benefitTitle {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--green-950);
+  margin-bottom: 0.15rem;
+}

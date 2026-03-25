@@ -1,6 +1,9 @@
 // src/components/Footer/Footer.tsx
 import Link from 'next/link';
 import styles from './Footer.module.scss';
+import AudioTap from '@/public/icons/audio-tap.svg';
+import Image from 'next/image';
+import ZenspaceLogo from '../ZenspaceLogo';
 
 const LINKS = {
   Solutions: [
@@ -32,7 +35,7 @@ export function Footer() {
       <div className={`${styles.inner} container`}>
 
         <div className={styles.brand}>
-          <Link href="/" className={styles.logo}>ZenSpace</Link>
+          <ZenspaceLogo />
           <p className={styles.tagline}>
             Your session ends.<br />Your notes are already done.
           </p>
