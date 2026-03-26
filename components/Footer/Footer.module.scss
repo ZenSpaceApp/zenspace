@@ -76,5 +76,5 @@
   color: $gray-500;
   transition: color $transition-fast;
 
-  &:hover { color: $white; }
+  &:hover { color: var(--green-500); }
 }

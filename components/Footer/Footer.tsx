@@ -6,26 +6,27 @@ import styles from './Footer.module.scss';
 import ZenspaceLogo from '../ui/ZenspaceLogo';
 
 const LINKS = {
-  Solutions: [
+  Ecosystem: [
+    { label: 'Find a Therapist',   href: '/' },
     { label: 'For Therapists', href: '/therapists' },
-    { label: 'ZenNotes',       href: '/zennotes' },
-    { label: 'For Patients',   href: '/#for-clients' },
+    { label: 'ZenNotes', href: '/zennotes' },
+    { label: 'Pricing',       href: '/pricing' }
+  ],
+  "Trust and Support": [
+    { label: 'Security & Privacy',          href: '/security' },
+    { label: 'HIPAA Compliance ',  href: '/hipaa-compliance' },
+    { label: 'FAQ', href: '/careers' },
+    { label: 'Support',        href: '/support' }
   ],
   Company: [
-    { label: 'About',          href: '/about' },
-    { label: 'Planet Health',  href: '/planet-health' },
-    { label: 'Careers',        href: '/careers' },
+    { label: 'About',        href: '/pricing' },
+    { label: 'Careers',       href: '/security' },
+    { label: 'Contact',          href: '/hipaa-compliance' }
   ],
-  Resources: [
-    { label: 'Pricing',        href: '/pricing' },
-    { label: 'Security',       href: '/security' },
-    { label: 'HIPAA',          href: '/hipaa-compliance' },
-    { label: 'FAQ',            href: '/faqs' },
-  ],
-  Support: [
-    { label: 'Contact',        href: '/contact-us' },
+  Legal: [
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms',          href: '/service-terms' },
+    { label: 'Terms of Service',        href: '/contact-us' },
+    { label: 'Cookie Settings',          href: '/service-terms' },
   ],
 };
 
