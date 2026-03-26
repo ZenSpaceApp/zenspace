@@ -17,7 +17,7 @@ export default function CTAHome() {
           <div className={styles.ctaBlock}>
             <p>I need support today.</p>
             <Button brand="match">
-              Find My Match
+              Find My Therapist
             </Button>
           </div>
 
