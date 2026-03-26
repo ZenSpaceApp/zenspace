@@ -1,0 +1,55 @@
+.hero {
+  @include section-spacing();
+  background: linear-gradient(180deg, var(--white), var(--green-50));
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-syne);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -0.04em;
+  color: var(--green-950);
+}
+
+.pillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.pill {
+  background: white;
+  border: 1px solid var(--green-200);
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--green-800);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--green-500);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--green-400);
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--green-600);
+  margin-top: 1rem;
+}

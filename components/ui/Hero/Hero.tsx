@@ -19,8 +19,8 @@ export default function Hero() {
       {/* 2. The Glassmorphism Search Hub */}
       {/* <div className={styles.container}> */}
         <div className={styles.glassCard}>
-          <h1>Find Your Match</h1>
-          <p>Therapists available in real-time.</p>
+          {/* <h1>Search and Connect</h1> */}
+          <h1>Therapists available in real-time.</h1>
           <SearchBar />
         </div>
       {/* </div> */}
