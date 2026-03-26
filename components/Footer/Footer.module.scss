@@ -2,7 +2,7 @@
 
 .footer {
   // background: var(--green-950); // Using your new Zen variables
-  padding: clamp(4rem, 8vw, 6rem) 0 5rem; 
+  padding: clamp(2.5rem, 8vw, 4rem) 1rem; 
   /* Remove margin-top and let the previous section's padding handle the air */
   margin-top: 0; 
   border-top: 1px solid var(--green-100);
