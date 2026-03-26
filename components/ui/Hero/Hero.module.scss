@@ -29,21 +29,15 @@
   box-shadow: 0 40px 100px rgba(0,0,0,0.1);
 
   h1 {
-    // font-family: var(--font-syne);
-    font-size: clamp(2rem, 6vw, 1.4rem);
-    margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
-    color: #0f1719;
     font-weight: 500; 
-    // display: none;
-      color: var(--green-100);
-  }
-
-  p {
-    font-size: 1.9rem;
-    margin-bottom: 2rem;
-    // opacity: 0.9;
-    color: var(--green-100);
-    font-family: var(--font-lora);
+    font-size: clamp(2.25rem, 5.5vw, 1.75rem); 
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  
+    /* Adding a subtle text-shadow helps it pop against the light rays/mist */
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   }
 }
