@@ -22,17 +22,19 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 2rem) 2rem 10px;
   border-radius: 16px;
   text-align: center;
   color: white;
   box-shadow: 0 40px 100px rgba(0,0,0,0.1);
 
   h1 {
-    font-family: var(--font-syne);
+    // font-family: var(--font-syne);
     font-size: clamp(2.5rem, 6vw, 2.5rem);
     margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
+    color: #0f1719;
+    font-weight: 500; 
   }
 
   p {

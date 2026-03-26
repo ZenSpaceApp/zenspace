@@ -16,6 +16,20 @@ export default function SearchBar() {
         <input type="text" placeholder="Add provider..." />
       </div>
 
+      <div className={styles.divider} />
+
+      <div className={styles.searchSection}>
+        <label>Gender</label>
+        <input type="text" placeholder="Male, Female, Non-binary..." />
+      </div>
+
+      <div className={styles.divider} />
+
+      <div className={styles.searchSection}>
+        <label>Languages</label>
+        <input type="text" placeholder="English, Spanish, French..." />
+      </div>
+      
       <button className={styles.searchButton}>
         <span className={styles.pulse} />
         Search
