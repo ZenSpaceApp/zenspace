@@ -1,8 +1,8 @@
-// components/marketing/CTASection/CTASection.tsx
-import styles from './CTASection.module.scss';
+// components/marketing/CTAZenNotes/CTAZenNotes.tsx
+import styles from './CTAZenNotes.module.scss';
 import Button from '../../ui/Button/Button';
 
-export default function CTASection() {
+export default function CTAZenNotes() {
   const benefits = [
     { title: "Ambient Capture", body: "Focus on the patient, not the keyboard." },
     { title: "Instant Synthesis", body: "SOAP notes ready before you leave the room." },

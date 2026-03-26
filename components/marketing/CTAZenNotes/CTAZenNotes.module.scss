@@ -1,6 +1,14 @@
 .wrapper {
   @include section-spacing();
   background: linear-gradient(to bottom, var(--green-50), white);
+
+   h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--green-900);
+    font-family: var(--font-lora);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
 }
 
 .inner {

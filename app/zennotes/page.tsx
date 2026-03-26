@@ -16,7 +16,7 @@ import { JobsSection } from '@/components/JTBDSection/JobsSecton';
 
 import PatientNoteMockup from '@/components/PatientNotesMockup/PatientNoteMockup';
 import BillingTab from '@/public/images/superbill_final.png';
-import CTASection from '@/components/marketing/CTASection/CTASection';
+import CTAZenNotes from '@/components/marketing/CTAZenNotes/CTAZenNotes';
 import FAQ from '@/components/FAQ/FAQ';
 
 export const metadata = {
@@ -288,7 +288,7 @@ export default function ZenNotesPage() {
           items={zenNotesFaqs} 
           brand="notes" 
         />
-        <CTASection />
+        <CTAZenNotes />
     </main>
     <Footer />
     </div>
