@@ -80,11 +80,14 @@ $white:         #ffffff;
   gap: 0;
   margin-bottom: 0;
   border-bottom: 1px solid $color-border;
+  align-items: center;
 
   @media (max-width: 600px) {
-    overflow-x: auto;
-    gap: 10px;
+    gap: 6px;
     border-bottom: none;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: flex-start;
   }
 }
 
@@ -129,7 +132,7 @@ $white:         #ffffff;
 }
 
 .tabActive {
-  font-weight: 700;
+  font-weight: 800;
 
   &::after {
     background: var(--green-600);
@@ -186,10 +189,11 @@ $white:         #ffffff;
 }
 
 .card {
-  border: 1px solid $color-border;
-  border-radius: 8px;
-  padding: 24px;
-  background: $white;
+  // border: 1px solid $color-border;
+  // border-radius: 8px;
+  padding: 8px 12px;
+  background: $color-bg-secondary;
+
 }
 
 // ── SOAP output ──────────────────────────────────────────────
