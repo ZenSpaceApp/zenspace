@@ -208,6 +208,7 @@ export default function PatientNoteMockup() {
 
         <div className={styles.homeBar} />
       </div>
+      <p>[Live Preview]</p>
     </div>
   );
 }
