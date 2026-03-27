@@ -284,7 +284,7 @@ export default function ZenNotesPage() {
         </div>
         </section>  
         <FAQ 
-          title="Privacy & Trust" 
+          title="Privacy & Trust Questions?" 
           items={zenNotesFaqs} 
           brand="notes" 
         />
