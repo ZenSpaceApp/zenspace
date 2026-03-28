@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import CharityImg from '@/public/images/charities.png'
+import CharityImg from '@/public/images/donate_your_hours.png'
 
 import { Footer, Navbar } from '@/components';
 
@@ -16,12 +16,14 @@ export default function DonateHours() {
             <Image 
               alt="Image show pledge to charities"
               src={CharityImg}
+            height={400}
+            width={400}
               style={{
-                maxWidth: "50%",
+                maxWidth: "100%",
                 height: "auto",
                 display: "block",
                 margin: "2rem auto",
-                backgroundColor: "linear-gradient(to bottom, var(--green-50), var(--green-100))",
+                backgroundColor: "linear-gradient(to bottom, var(--green-50), var(--green-900))",
                 }}
               />
             
