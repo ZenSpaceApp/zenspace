@@ -1,9 +1,11 @@
 .hero {
-  @include section-spacing();
+
+  @include hero-spacing();
   background: linear-gradient(180deg, var(--white), var(--green-50));
   min-height: 70vh;
   display: flex;
   align-items: center;
+
 }
 
 .container {
@@ -12,12 +14,12 @@
   text-align: center;
 }
 
-.title {
-  font-family: var(--font-syne);
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  letter-spacing: -0.04em;
-  color: var(--green-950);
-}
+// .title {
+//   font-family: var(--font-syne);
+//   font-size: clamp(2.5rem, 6vw, 4rem);
+//   letter-spacing: -0.04em;
+//   color: var(--green-950);
+// }
 
 .pillContainer {
   display: flex;

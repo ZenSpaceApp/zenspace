@@ -8,7 +8,7 @@ import ZenspaceLogo from '../ui/ZenspaceLogo';
 const LINKS = {
   Ecosystem: [
     { label: 'Find a Therapist',   href: '/' },
-    { label: 'For Therapists', href: '/therapists' },
+    { label: 'For Therapists', href: '/for-therapists' },
     { label: 'ZenNotes', href: '/zennotes' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Integrations', href: '/integrations' }

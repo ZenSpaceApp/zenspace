@@ -7,7 +7,7 @@ import styles from './Navbar.module.scss';
 import ZenspaceLogo from '../ui/ZenspaceLogo';
 
 const NAV_LINKS = [
-  { label: 'Therapists', href: '/therapists' },
+  { label: 'Therapists', href: '/for-therapists' },
   { label: 'ZenNotes',   href: '/zennotes' },
   { label: 'Pricing',    href: '/pricing' },
 ];
