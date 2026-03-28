@@ -1,0 +1,83 @@
+
+.hubWrapper {
+  /* Ensure it expands from the top-center */
+  transform-origin: top center; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &.isActive {
+    /* Fixed at the top, but the layout prop handles the growth from the hero position */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) !important; // Keeps it centered horizontally
+    // width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    z-index: 9999;
+    padding: clamp(2rem, 5vw, 2rem);
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* This prevents the search bar from 'jumping' diagonally */
+  align-items: center; 
+}
+
+
+.searchPill {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--green-200);
+  border-radius: 100px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.inputSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  label { display: none; font-size: 0.7rem; text-transform: uppercase; color: var(--green-600); }
+  label.showLabel { display: block; }
+  input { border: none; outline: none; font-size: 1.1rem; width: 100%; }
+}
+
+.resultsArea {
+  /* Essential: ensures the 'unfold' starts from the search bar */
+  transform-origin: top center; 
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  /* Background should be clean to contrast with the mist */
+  background: white;
+  border-radius: 0 0 24px 24px;
+}
+
+.resultsInner {
+  /* Padding here prevents the height calculation from jumping */
+  padding: 2rem 1.5rem;
+}
+
+
+.row {
+  border-bottom: 1px solid var(--green-50);
+  .rowHeader { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+  .expansion { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease; overflow: hidden; }
+  &.open .expansion { grid-template-rows: 1fr; }
+  .innerContent { padding-bottom: 2rem; }
+}
+
+.liveDot {
+  width: 8px; height: 8px; background: var(--green-500); border-radius: 50%;
+  display: inline-block; margin-right: 10px; animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }

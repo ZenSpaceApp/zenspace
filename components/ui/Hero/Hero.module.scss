@@ -23,11 +23,19 @@
   background: rgba(255, 255, 255, 0.1);
   // backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: clamp(2rem, 5vw, 2rem) 2rem 10px;
+  padding: clamp(2rem, 5vw, 2rem) 2rem 1rem;
   border-radius: 16px;
   text-align: center;
   color: white;
   box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+  max-width: 900px;
+
+  max-height:220px;
+  opacity: 1;
+  transition: 
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.3s ease;
 
   h1 {
     letter-spacing: -0.03em;
@@ -41,4 +49,33 @@
     /* Adding a subtle text-shadow helps it pop against the light rays/mist */
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   }
+
+  &.expanded {
+    max-height: 90vh;          // open to 80% of viewport
+    border-radius: $radius-xl; // slightly less round when expanded
+    overflow-y: auto;
+    z-index: 99999;
+    padding-top: 0; 
+    margin-top: 4rem;
+    max-width: 900px;
+    background: white;
+  }
 }
+
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+
+  .closeButton {
+    font-size: 1.25rem;
+    color: black;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+}
+
+

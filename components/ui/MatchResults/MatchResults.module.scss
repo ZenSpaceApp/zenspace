@@ -1,0 +1,173 @@
+// ── Results area ──────────────────────────────
+.results {
+  // padding: $space-2 $space-3 $space-6;
+
+  // Hidden until expanded — fade in after accordion opens
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease 0.2s,   // delay matches accordion open
+    transform 0.25s ease 0.2s;
+
+  .expanded & {
+    opacity: 1;
+    transform: translateY(0);
+    background: white;
+  }
+}
+
+.resultsArea {
+  /* Essential: ensures the 'unfold' starts from the search bar */
+  transform-origin: top center; 
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  /* Background should be clean to contrast with the mist */
+  background: white;
+  border-radius: 0 0 24px 24px;
+}
+
+.resultsInner {
+  /* Padding here prevents the height calculation from jumping */
+  padding: 2rem 1.5rem;
+}
+
+
+.row {
+  border-bottom: 1px solid var(--green-50);
+  .rowHeader { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+  .expansion { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease; overflow: hidden; }
+  &.open .expansion { grid-template-rows: 1fr; }
+  .innerContent { padding-bottom: 2rem; }
+}
+
+.liveDot {
+  width: 8px; height: 8px; background: var(--green-500); border-radius: 50%;
+  display: inline-block; margin-right: 10px; animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+
+
+.row {
+  border-bottom: 1px solid var(--green-50);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover { background: var(--green-50); }
+  
+  &.open { background: white; }
+
+  color: black;
+
+  .textGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .name {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .specialty {
+      font-size: 0.85rem;
+      color: var(--green-600);
+    }
+  }
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--green-500);
+  border-radius: 50%;
+  margin-right: 12px;
+  animation: breathe 2s infinite;
+}
+
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  /* No cursor:pointer here because only the button clicks */
+}
+
+.expandBtn {
+  background: var(--green-100);
+  color: var(--green-900);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--green-600);
+    color: white;
+  }
+}
+
+.expansionPanel {
+  /* Using Grid for the smoothest height animation */
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--white);
+}
+
+.row.open .expansionPanel {
+  grid-template-rows: 1fr;
+  border-top: 1px solid var(--green-50);
+}
+
+.panelContent {
+  overflow: hidden;
+  padding: 0 2rem; // Horizontal padding only, vertical comes when open
+}
+
+.row.open .panelContent {
+  padding: 2rem;
+}
+
+
+.bioSnippet {
+  font-size: 0.85rem;
+  color: var(--green-600);
+  font-style: italic;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.ratingGroup {
+  text-align: right;
+  margin-right: 1.5rem;
+
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--green-800);
+    font-weight: 700;
+  }
+
+  .star {
+    color: #FFD700; // A soft, amber gold—not neon
+    font-size: 0.9rem;
+  }
+
+  .sourceLabel {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--green-500);
+    margin-top: 2px;
+  }
+}

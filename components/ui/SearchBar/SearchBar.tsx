@@ -1,7 +1,7 @@
-// components/ui/SearchBar/SearchBar.tsx
+import Button from '../Button/Button';
 import styles from './SearchBar.module.scss';
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }: { onSearch: () => void }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.searchSection}>
@@ -30,11 +30,10 @@ export default function SearchBar() {
         <input type="text" placeholder="English, Spanish, French..." />
       </div>
       
-      <button className={styles.searchButton}>
+      <Button brand="match" onClick={onSearch}>
         <span className={styles.pulse} />
         Search
-      </button>
+      </Button>
     </div>
   );
 }
-
