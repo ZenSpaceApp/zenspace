@@ -10,18 +10,23 @@ const LINKS = {
     { label: 'Find a Therapist',   href: '/' },
     { label: 'For Therapists', href: '/therapists' },
     { label: 'ZenNotes', href: '/zennotes' },
-    { label: 'Pricing',       href: '/pricing' }
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'Integrations', href: '/integrations' }
   ],
   "Trust and Support": [
     { label: 'Security & Privacy',          href: '/security' },
     { label: 'HIPAA Compliance ',  href: '/hipaa-compliance' },
     { label: 'FAQ', href: '/careers' },
-    { label: 'Support',        href: '/support' }
+    { label: 'Support', href: '/support' },
+    { label: 'Accessibility', href: '/accessibility' }
   ],
   Company: [
     { label: 'About',        href: '/pricing' },
     { label: 'Careers',       href: '/security' },
-    { label: 'Contact',          href: '/hipaa-compliance' }
+    { label: 'Contact', href: '/hipaa-compliance' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Press', href: '/press' },
+    { label: 'Donate', href: '/donate-hours' }
   ],
   Legal: [
     { label: 'Privacy Policy', href: '/privacy' },
