@@ -4,6 +4,7 @@ import styles from './Hero.module.scss';
 
 import { useEffect, useState } from 'react';
 import MatchResults from '../MatchResults/MatchResults';
+import CollapseIcon from '@/public/icons/collapse.svg';
 
 export default function Hero() {
 
@@ -38,12 +39,13 @@ const [expanded, setExpanded] = useState(false);
           <div className={[styles.glassCard, expanded ? styles.expanded : ''].join(' ')}>
             <div className={[styles.wrapper, expanded ? styles.expanded : ''].join(' ')}>  
               <div className={styles.resultsHeader}>
+                <SearchBar onSearch={handleSearch}/>
                 <div
                   className={styles.closeButton}
                   onClick={() => setExpanded(false)}>
-                  X
+
+                  <Image src={CollapseIcon} alt="Close" width={24} height={24} />
                 </div>
-              <SearchBar onSearch={handleSearch}/>
               </div>
               <div className={styles.divider} />    
               <div className={styles.matchResults}>
