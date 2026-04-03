@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
-import { Inter, Lora, Syne } from 'next/font/google';
+import { Inter, Lora, Syne, Geist_Mono } from 'next/font/google';
 import '@/styles/globals.scss';
 
 const inter = Inter({
@@ -20,6 +20,13 @@ const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',
 });
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${lora.variable} ${syne.variable}`}>
+    <html lang="en" className={`${inter.variable} ${lora.variable} ${syne.variable} ${geistMono.variable}`}>
       <body>{children}</body>
     </html>
   );

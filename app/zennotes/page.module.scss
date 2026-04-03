@@ -78,9 +78,9 @@
   padding: 0.45rem 1rem;
   margin-bottom: 1.25rem;
   justify-content: flex-start;
-
+  font-family: var(--font-geist-mono);
   span {
-    font-weight: 700;
+    // font-weight: 700;
     color: var(--color--grey3);
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -118,8 +118,8 @@
     // font-size: 1.15rem;
     line-height: 1.5;
     color: var(--color--grey3);
-    max-width: 400px;
-    font-weight: 500;
+    max-width: 440px;
+    // font-weight: 500;
     margin: 0 0 2rem;
     // opacity: 0.8;
 
@@ -222,7 +222,7 @@
     color: var(--color--grey3);
     margin: 0 0 1.5rem;
     letter-spacing: 0.02em;
-    font-weight: 500;
+    // font-weight: 500;
   }
 
   @include section-spacing();
@@ -259,7 +259,7 @@
     color: var(--color--grey3);
     margin: 0;
     display: inline;
-    font-weight: 500;
+
   }
 }
 
@@ -348,7 +348,6 @@
   line-height: 1.4;
   color: var(--color--grey3);
   margin: 0;
-  font-weight: 500;
   margin: 1rem 0 2rem;
 }
 
@@ -618,9 +617,9 @@
     /* Use your global variables instead of hardcoded hex/px */
     color: var(--green-800);
     line-height: 1.6;
-    font-weight: 500;
+    // font-weight: 500;
     margin-bottom: 1.5rem;
-    font-size: clamp(1rem, 2vw, 1.15rem);
+    // font-size: clamp(1rem, 2vw, 1.15rem);
   }
 
   b {
@@ -641,9 +640,9 @@
 }
 
 .subheadline {
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  // font-size: clamp(1.1rem, 2vw, 1.3rem);
   color: var(--green-700);
-  font-weight: 500;
+  // font-weight: 500;
   margin-top: -0.5rem; // Tighten the gap to the H2
 }
 
